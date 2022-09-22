@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains a collection of **C++** softwares based on the implementation of an undirected graph Class. This allows for the usage of ODE and PDE solver, the implementation of a Breadth-First Search (BFS) algorithm, a solver of systems of sparse matrices and more, all using this class.
+This repository contains a collection of **C++ softwares** based on the implementation of an _Undirected Graph_ Class. This allows for the usage of **ODE** and **PDE** solvers, the implementation of a _Breadth-First Search (BFS) algorithm_, a solver of systems of _sparse matrices_ and more, all using this class.
     
 ## Table of Contents
 
