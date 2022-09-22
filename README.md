@@ -7,7 +7,7 @@ This repository contains a collection of **C++** softwares based on the implemen
 ## Table of Contents
 
 - [Graph Class](#Graph-Class)
-- [Breadth-First Search Algorithm](#BFS)
+- [Breadth-First Search (BFS) Algorithm](#BFS)
 - [Mass Spring](#Mass-Spring)
 - [Conjugate Gradient and Sparse Matrices](#Conjugate-Gradient-and-Sparse-Matrices)
 - [Parallel Computing using OpenMP](#Parallel-Computing)
@@ -30,13 +30,15 @@ All three classes (Node, Edge and Graph) are thoroughly tested using GoogleTest,
 </tr>
 </table>
 
-## Airfoil Computations
+## Breadth-First Search (BFS) Algorithm
 
 <table>
 <tr>
 <td>
 
 After implementing the Graph Class, a viewer is implemented using SFML combined with OpenGL for high-performance graphics. It is able to read sets of Nodes and Egdes files that contain their respective 3D positions.
+
+Thanks to appropriate usage of C++ STL data structures, the code is able to instantly read through Nodes and Egdes and automatically output the result. After this, random 3D coordinates are chosen. Starting from the closest Node to those coordinates, a BFS algorithm is implemented to parse through all Nodes of the Graph and compute the shortest path in terms of Edges to the original Node. Using this, each Node is coloured according to how close or far it is from the original Node.
 <p align="center">
 <img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/A6760F25-AD77-4D39-BEE5-18B1B57BD93B.jpeg" width="700">
 </p>
@@ -45,37 +47,6 @@ After implementing the Graph Class, a viewer is implemented using SFML combined 
 </tr>
 </table>
 
-### Terminal commands and outputs
-
-1. First, cd into the airfoil_computations folder:
-
-    ```
-    $ cd airfoil_computations
-    ```
-
-2. Then, run the following command to process the data of one of the example directories:
-
-    ```
-    $ python main.py naca0012/
-    ```
-    
-3. You should get the following output:
-    ```
-    |alpha  | cl      |stagnation pt|
-    |-----  |-------  |--------------------------|
-    |-3.00  |-0.3622  |( 0.0030,  0.0094)  0.9906|
-    | 0.00  | 0.0000  |( 0.0000,  0.0000)  0.9944|
-    | 3.00  | 0.3622  |( 0.0030, -0.0094)  0.9906|
-    | 6.00  | 0.7235  |( 0.0099, -0.0170)  0.9967|
-    | 9.00  | 1.0827  |( 0.0219, -0.0246)  0.9977|
-    ```
-
-## Truss Linear Equations
-
-<table>
-<tr>
-<td>
-  
 **Truss Linear Equations** is a Python software to define a Truss class for loading and analyzing a 2D truss using the method of joints.
 
 <p align="center">
