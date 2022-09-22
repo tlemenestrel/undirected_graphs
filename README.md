@@ -23,7 +23,7 @@ The Graph class is implemented using two sub-classes for Nodes and Edges. A Grap
 All three classes (Node, Edge and Graph) are thoroughly tested using GoogleTest, a testing framework for C++ code by Google.
 
 <p align="center">
-<img src="https://github.com/tlemenestrel/swe_scientific_projects/blob/master/genome_processing/images/alignments.png" width="700">
+<img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/53919192-8211-4DC7-8EF5-B69487EA4384.png" width="700">
 </p>
 
 </td>
