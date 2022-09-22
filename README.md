@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains a collection of **C++* softwares based on the implementation of an undirected graph Class. This allows for the usage of ODE and PDE solver, the implementation of a Breadth-First Search (BFS) algorithm, a solver of systems of sparse matrices and more, all using this class.
+This repository contains a collection of **C++** softwares based on the implementation of an undirected graph Class. This allows for the usage of ODE and PDE solver, the implementation of a Breadth-First Search (BFS) algorithm, a solver of systems of sparse matrices and more, all using this class.
     
 ## Table of Contents
 
@@ -12,17 +12,15 @@ This repository contains a collection of **C++* softwares based on the implement
 - [Conjugate Gradient and Sparse Matrices](#Conjugate-Gradient-and-Sparse-Matrices)
 - [Parallel Computing using OpenMP](#Parallel-Computing)
 
-## Genome Processing
+## Graph Class
 
 <table>
 <tr>
 <td>
   
-**Genome Processing** is a Python software to generate _DNA references_ and compute the alignments of given DNA sequences with the _generated reference_. 
-This allows to identify **regions of similarity** that may be a consequence of _evolutionary relationships_ between the sequences. 
+The Graph class is implemented using two sub-classes for Nodes and Edges. A Graph is made of two Hash Maps (called unorderded maps in the C++ STL), which contain the different Nodes and Edges of the Graph. The Nodes are implemented using a **Design Pattern** called a _Proxy Pattern_. Instead of storing all the information of a Node in the Node class, we define a Proxy Class which points to the underlying data of the Node. This allows for much lighter data structures and better encapsulation.
 
-The code generates an **output file** that contains the index of the _matches of each sequence with the reference_ and the _percentage of how many matches
-each sequence has_ (i.e. if a sequence matche once, twice or does not match the reference) and the _computing time_.
+All three classes (Node, Edge and Graph) are thoroughly tested using GoogleTest, a testing framework for C++ code by Google.
 
 <p align="center">
 <img src="https://github.com/tlemenestrel/swe_scientific_projects/blob/master/genome_processing/images/alignments.png" width="700">
@@ -31,83 +29,6 @@ each sequence has_ (i.e. if a sequence matche once, twice or does not match the 
 </td>
 </tr>
 </table>
-
-### Terminal commands and outputs
-
-1. First, cd into the genome_processing folder:
-
-    ```
-    $ cd genome_processing
-    ```
-
-2. Then, run the following command to process a given sequence:
-
-    ```
-    $ python processdata.py references/ref_3.txt reads/reads_3.txt alignments/align_3.txt
-    ```
-3. You should get the following output:
-    ```
-    reference_length: 100000
-    number reads: 60000
-    aligns 0: 0.15
-    aligns 1: 0.75
-    aligns 2: 0.1
-    elapsed time: 23.56
-    ```
-<details><summary><b>Show datasets and computing time</b></summary></br>
-
-| Dataset | Reference length | Magnitude | Number of reads	| Reads length | Time and magnitude
-|---|---|---|---|---|---|
-|1 | 1000       |10<sup>3</sup>		| 600    | 50    | 0.003 s (10<sup>-3</sup>)
-|2 | 10000      |10<sup>4</sup>		| 6000   | 50    | 0.1   s (10<sup>-1</sup>)
-|3 | 100000     |10<sup>5</sup>	    | 60000  | 50    | 23    s (10<sup>2</sup>)
-
-</details>
-
-## Recommendation Algorithm
-
-<table>
-<tr>
-<td>
-
-**Recommendation algorithm** is a Python software to compute similarities between movies using cosine similarity and recommend new movies to users. It is made of several functions.
-
-The first one is key_function, an auxiliary function to sort the lines that takes a line of a file as an input. It is later used in the 2nd function sort_file, which takes as input the name of the file to sort and sorts it according to the elements in the first "column" of the txt file, which here is the movie id.
-
-The 3rd function computes the average movie ratings and takes as input a dictionnary which it will use to store the values and the input dictionnary with the movies and their ratings.
-
-The 4th function writes the final output file and iterates over the dictionnary and its sub dictionnaries to print out the movie id, its match (with the id) and the cosine similarity score. The file is finally according to the input filename in the .txt format.
-
-<p align="center">
-<img src="https://github.com/tlemenestrel/swe_scientific_projects/blob/master/recommendation_algorithm/images/cosine.png" width="700">
-</p>
-
-</td>
-</tr>
-</table>
-
-### Terminal commands and outputs
-
-1. First, cd into the recommendation_algorithm folder:
-
-    ```
-    $ cd recommendation_algorithm
-    ```
-
-2. Then, run the following command to run the software on the ml-100k dataset:
-
-    ```
-    $ $ python similarity.py ml-100k/u.data similarities.txt
-    ```
-    
-3. You should get the following output:
-    ```
-    Input MovieLens file: ml-100k/u.data
-    Output file for similarity data: similarities.txt
-    Minimum number of common users: 5
-    Read 100000 with total of 1682 movies and 943 users
-    Computed similarities in 121.71 seconds
-    ```
 
 ## Airfoil Computations
 
