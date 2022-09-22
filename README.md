@@ -36,12 +36,9 @@ All three classes (Node, Edge and Graph) are thoroughly tested using GoogleTest,
 <tr>
 <td>
 
-**Airfoil Computations** is a Python software to compute the _coefficient lift_ of an airfoil depending on **alpha**, the _angle of attack_. For that, various data files are given in a directory. The code reads the _directory_, finds the name of the different input files and computes the **lift coefficient** for each angle of attack.
-
-It is able to read any data for a specific angle of attack and compute the lift coefficient for it. Therefore, it does not require the user to give the angles of attack as inputs. Finally, it has several **error checking** and **exception generation** to check that the user had provided the right _path_ to the directory for the data files, that any of the required _data files_ were found in the data directory and if an **error** was detected when reading an input file.
-
+After implementing the Graph Class, a viewer is implemented using SFML combined with OpenGL for high-performance graphics. It is able to read sets of Nodes and Egdes files that contain their respective 3D positions.
 <p align="center">
-<img src="https://github.com/tlemenestrel/swe_scientific_projects/blob/master/airfoil_computations/images/angles.png" width="700">
+<img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/A6760F25-AD77-4D39-BEE5-18B1B57BD93B.jpeg" width="700">
 </p>
 
 </td>
