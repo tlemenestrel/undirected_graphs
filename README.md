@@ -46,3 +46,22 @@ Thanks to appropriate usage of C++ STL data structures, the code is able to read
 </td>
 </tr>
 </table>
+
+## Mass Spring
+
+<table>
+<tr>
+<td>
+
+We use the Graph class to implement a solver for Spring Mass systems. Each node has zero as initial velocity and a mass equal to 1 / N, N being the number of nodes in the graph. We have a spring constant set to 100 and a rest-length L set uniformly across all Edges of the Graph.
+
+To solve the numerical system, we update the position based on the velocity, compute the force using the new position and finally update the velocity.
+
+We use an OOP framework to represent forces by building a parent Force class and having 3 subclasses inheriting from it for gravity, damping and mass spring.
+<p align="center">
+<img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/53919192-8211-4DC7-8EF5-B69487EA4384.png" width="700">
+</p>
+
+</td>
+</tr>
+</table>
