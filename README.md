@@ -38,7 +38,7 @@ All three classes (Node, Edge and Graph) are thoroughly tested using GoogleTest,
 
 After implementing the Graph Class, a viewer is implemented using SFML combined with OpenGL for high-performance graphics. It is able to read sets of Nodes and Egdes files that contain their respective 3D positions.
 
-Thanks to appropriate usage of C++ STL data structures, the code is able to read through 10,000 Nodes and 300,000 Egdes within less than 1 second and automatically output the result. After this, random 3D coordinates are chosen. Starting from the closest Node to those coordinates, a BFS algorithm is implemented to parse through all Nodes of the Graph and compute the shortest path in terms of the number of Edges to go through to get to the original Node. Using this, each Node is coloured according to how close or far it is from the original Node.
+Thanks to appropriate usage of C++ STL data structures, the code is able to read through 10,000 Nodes and 300,000 Egdes within less than 1 second and automatically output the result. After this, a set of random 3D coordinates are chosen. Starting from the closest Node to those coordinates, a BFS algorithm is implemented to parse through all Nodes of the Graph and compute the shortest path in terms of the number of Edges to go through to get to the original Node. Using this, each Node is coloured according to how close or far it is from the original Node.
 <p align="center">
 <img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/A6760F25-AD77-4D39-BEE5-18B1B57BD93B.jpeg" width="700">
 </p>
