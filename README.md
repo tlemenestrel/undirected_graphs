@@ -58,8 +58,9 @@ We use the Graph class to implement a solver for Spring Mass systems. Each node 
 To solve the numerical system, we update the position based on the velocity, compute the force using the new position and finally update the velocity.
 
 We use an OOP framework to represent forces by building a parent Force class and having 3 subclasses inheriting from it for gravity, damping and mass spring.
+
 <p align="center">
-<img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/53919192-8211-4DC7-8EF5-B69487EA4384.png" width="700">
+<img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/9E269D24-D723-4089-BF5B-766B7B2C3FFE.jpeg" width="700">
 </p>
 
 </td>
