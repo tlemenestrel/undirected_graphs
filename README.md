@@ -86,3 +86,23 @@ Finally, we visualize the convergence of the solution by plotting the x and y co
 </td>
 </tr>
 </table>
+
+# Parallel Computing using OpenMP
+
+
+
+<table>
+<tr>
+<td>
+
+We re-implement the Mass Spring algorithm but in a parallel manner by using OpenMP and Thrust. This allows for much faster processing as each velocity and position of the Nodes can be computed at the same time.  
+
+This allows to speed up the mass spring computation by a factor of 40 on a large grid (1M Nodes and 4M Edges).
+
+<p align="center">
+<img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/BFDB2FA3-24D7-48EC-AF7C-C893DD7925AE.png" width="700">
+</p>
+
+</td>
+</tr>
+</table>
