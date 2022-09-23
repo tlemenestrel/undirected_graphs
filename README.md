@@ -10,7 +10,7 @@ This repository contains a collection of **C++ softwares** based on the implemen
 - [Breadth-First Search (BFS) Algorithm](#BFS)
 - [Mass Spring](#Mass-Spring)
 - [Conjugate Gradient and Sparse Matrices](#Conjugate-Gradient-and-Sparse-Matrices)
-- [Parallel Computing using OpenMP](#Parallel-Computing)
+- [Parallel Computing using OpenMP](#Parallel-Computing-using-OpenMP)
 
 ## Graph Class
 
