@@ -80,7 +80,7 @@ Compared to the mass spring approach where we approximated derivatives in time, 
 Finally, we visualize the convergence of the solution by plotting the x and y coordinates of each node and the scalar solution to the Poisson problem of each node using the SFML viewer.
 
 <p align="center">
-<img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/9E269D24-D723-4089-BF5B-766B7B2C3FFE.jpeg" width="700">
+<img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/CB7867AE-F7CE-4560-88F0-8346EF1DBFC8.png" width="700">
 </p>
 
 </td>
