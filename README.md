@@ -53,11 +53,31 @@ Thanks to appropriate usage of C++ STL data structures, the code is able to read
 <tr>
 <td>
 
-We use the Graph class to implement a solver for Spring Mass systems. Each node has zero as initial velocity and a mass equal to 1 / N, N being the number of nodes in the graph. We have a spring constant set to 100 and a rest-length L set uniformly across all Edges of the Graph.
+We use the Graph class to implement a solver for Spring Mass systems. Each node has zero as initial velocity and a mass equal to 1 / N, N being the number of nodes in the graph. We have a spring constant set to 100 and a rest-length L set uniformly across all Edges of the Graph. The mass spring simulation works by solving a differential equation using an iterative approach.
 
 To solve the numerical system, we update the position based on the velocity, compute the force using the new position and finally update the velocity.
 
 We use an OOP framework to represent forces by building a parent Force class and having 3 subclasses inheriting from it for gravity, damping and mass spring.
+
+<p align="center">
+<img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/9E269D24-D723-4089-BF5B-766B7B2C3FFE.jpeg" width="700">
+</p>
+
+</td>
+</tr>
+</table>
+
+## Conjugate Gradient and Sparse Matrices
+
+<table>
+<tr>
+<td>
+
+We implement the Conjugate Gradient (CG) algorithm for solving systems of equations with symmetric matrices and represent those using the Graph class. The CG solver is implemented to work efficiently for sparse matrix-vector products. Then, we implement the boundary conditions and solve the system using the Conjugate Gradient Solver. 
+
+Compared to the mass spring approach where we approximated derivatives in time, here we approximate them in space. We can approximate the Laplacian operator by a discrete Laplacian matrix, which we use to solve the system Ax = b.
+
+Finally, we visualize the convergence of the solution by plotting the x and y coordinates of each node and the scalar solution to the Poisson problem of each node using the SFML viewer.
 
 <p align="center">
 <img src="https://github.com/tlemenestrel/undirected_graphs/blob/main/data/9E269D24-D723-4089-BF5B-766B7B2C3FFE.jpeg" width="700">
